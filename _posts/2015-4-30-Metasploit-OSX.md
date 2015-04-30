@@ -4,7 +4,7 @@ title: Metasploit on OSX
 ---
 [labrat's guide on installing metasploit on maverick](http://www.labrat.com/2014/02/how-to-install-metasploit-on-mavericks.html)
 
-used this guide to install metasploit on osx yosemite. It worked great however when install the pg gem there was no way to manually install this with the proper hooks. Running msfupdate to build the gems fixed it.
+I used this guide to install metasploit on osx yosemite. It worked great however when install the pg gem there was no way to manually install this with the proper hooks. Running msfupdate to build the gems fixed it.
 
 Notes on limitations however:
 
@@ -16,7 +16,7 @@ The database does not automatically connect so on starting msfconsole you have t
 
 
 {% highlight ruby %}
- db_connect msf:msf@127.0.0.1/msf
+ msf> db_connect msf:msf@127.0.0.1/msf
 {% endhighlight %}
 
 
