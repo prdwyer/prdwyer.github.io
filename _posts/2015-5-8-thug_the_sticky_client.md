@@ -136,7 +136,7 @@ sudo python thug.py -u winxpie60 -J 1.1 http://192.168.5.105:8080/test
 
 By playing with the user agent and the plugin versions you can get the webserver to react to the request differently. 
 
-The analysis folder in the log directly contains a generated image in svg format that allows to to visualize the redirects at each hop and the method of the redirect. This can get pretty crazy and intricate. This is good place to start to see suspicious redirects or inclusions in seemly innocous domains.
+The analysis folder in the log contains a generated svg image that allows to to visualize the redirects at each hop and the method of the redirect. This can get pretty crazy and intricate. This is good place to start to see suspicious redirects or inclusions in seemly innocous domains.
 
 
 Thug is a great tool for analyzing web request responses. It builds a comprehensive file structure of resources it obtains via the request and automatically beautifies any javascript found. It definitely has a lot of potential to pull some interesting artifacts out of any client side browser exploit. 
