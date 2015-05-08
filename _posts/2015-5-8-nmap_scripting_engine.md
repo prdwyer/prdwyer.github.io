@@ -4,6 +4,7 @@ title: Nmap Scripting Engine
 ---
 
 Nmap typically is used as a networking tool to find open ports. It has quite the suite of capabilities installed with it that give a incredible amount of reconissance power and push its pentest lifecycle use out of the reconissance phase into vulnerability scanning and detection. 
+
 Some of nmaps more mature and automated abilites come from the scripting engine these are invoked via the option --script. There are two types of files being used by nse.Nse library files have a .lua extension and reside in /share/nmap/nselib/. The actual scripts live in /share/nmap/scripts/. 
 
 nmap can update its own script database:
@@ -39,24 +40,23 @@ Nmap done: 1 IP address (1 host up) scanned in 13.93 seconds
 
 scripts can be run individually using their script name or many of of them can be run by categories. 
 
-auth - Scripts that can take user name and password to obtain information from services. Also includes scripts that attempt to enumerate users.
+*auth - Scripts that can take user name and password to obtain information from services. Also includes scripts that attempt to enumerate users.
 
-broadcast - Mostly discovery scripts that attempt to enumerate hosts based upon various types of broadcast packets. 
+*broadcast - Mostly discovery scripts that attempt to enumerate hosts based upon various types of broadcast packets. 
 
-brute - Brute forcing various services.
+*brute - Brute forcing various services.
 
-default - These scripts are the ones run by the -sC option
+*default - These scripts are the ones run by the -sC option
 
-discovery - Querying the maximum information out of services 
+*discovery - Querying the maximum information out of services 
 
-dos - Scripts that test for and perform a few types of dos attacks. There aren't a ton of them but there are slowloris, avahi, and smb dos scripts.
+*dos - Scripts that test for and perform a few types of dos attacks. There aren't a ton of them but there are slowloris, avahi, and smb dos scripts.
 
-exploit - These scripts detect various CVEs  and vulnerabilities on the target.
+*exploit - These scripts detect various CVEs  and vulnerabilities on the target.
 
-vuln - Scans for vulnerabilities. This category is very cool. Its great to point nmap at at web server and instantly be pulling out sqli vulnerabilites rather than spinning up a intensive vulnerability scanner. 
+*vuln - Scans for vulnerabilities. This category is very cool. Its great to point nmap at at web server and instantly be pulling out sqli vulnerabilites rather than spinning up a intensive vulnerability scanner. 
 
-safe - low impact quiet scripts. These are stealthier.
-
+*safe - low impact quiet scripts. These are stealthier.
 
 
 
