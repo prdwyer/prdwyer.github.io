@@ -2,8 +2,7 @@
 layout: post
 title: Tutorial on using Thug.py, the sweet sticky client
 ---
-Most "honey" software is intended to emulate a server side to get intelligence from accessing attempts. Client side attacks are becoming common and there to research these attacks there is a need for emulating a client. This is what thug does. It requests a target url, follows redirects and obtains all javascript and shellcode from potentially malicious urls. 
-
+Most "honey" software is intended to emulate a systemhowever, client side attacks are becoming common and to research these attacks there is a need for emulating a client. Enter thug. It requests a target url, follows redirects and obtains all javascript and shellcode from potentially malicious urls.
 Thug can be found on the excellent honeydrive linux distribution but the project is being very actively maintained and newer version can be cloned right from [https://github.com/buffer/thug](https://github.com/buffer/thug)
 
 {% highlight tcsh %}
@@ -108,7 +107,7 @@ honeydrive@honeydrive:/honeydrive/thug/src$ sudo python thug.py http://192.168.5
 [2015-05-08 00:42:47] Saving log analysis at ../logs/6b3804e98f36d15e1bb5bc1e9cee0a75/20150508004242
 {% endhighlight %}
 
-Checking out the logs directy shows us some long directory names. There is the thug.csv file which tells you which url request corresponds to the directory names. The names were computed by hashing the contents of the request.
+Checking out the logs directy shows us some long directory names. There is the thug.csv file which tells you which url request corresponds to the directory names. The names were computed by hashing the contents of the request and timestamps of the event. Below you can see the directory structure of the thug generated record.
 
 {% highlight tcsh %}
 honeydrive@honeydrive:/honeydrive/thug/logs/6b3804e98f36d15e1bb5bc1e9cee0a75$ tree
@@ -126,8 +125,7 @@ honeydrive@honeydrive:/honeydrive/thug/logs/6b3804e98f36d15e1bb5bc1e9cee0a75$ tr
             └── c0e703784116c3367d9454be61879d2b
 {% endhighlight %}
 
-unfortunately we didnt really get that much out of this request. 
-looking at the html files it seems that the script is fingerprinting the requester and routing it to an exploit accordingly.
+looking at the html files you can see that the script is fingerprinting the requester and routing it to an exploit if it's applicable.
 
 
 {% highlight tcsh %}
