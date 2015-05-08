@@ -6,9 +6,7 @@ Most "honey" software is intended to emulate a server side to get intelligence f
 
 Thug can be found on the excellent honeydrive linux distribution but the project is being very actively maintained and newer version can be cloned right from [https://github.com/buffer/thug](https://github.com/buffer/thug)
 
-Thug has a lot of capabilites as you can see from the a -h
-
-{% highlight ruby %}
+{% highlight tcsh %}
 
  Thug: Pure Python honeyclient implementation
 
@@ -86,11 +84,10 @@ Thug has a lot of capabilites as you can see from the a -h
 
 {% endhighlight %}
 
-
 It supports all kinds of user agents, allows you to send the samples directly to virustotal and gives you the option to specify different plugins. The proxy support is also a great feature.
 
 To demo it I threw up a standard metasploit browser autopwn module and pointed thug at it without using any options.
-{% highlight ruby %}
+{% highlight tcsh %}
 sudo python thug.py http://192.168.5.105:8080/test
 
 [2015-05-08 00:42:32] [window open redirection] about:blank -> http://192.168.5.105:8080/test/
@@ -113,7 +110,7 @@ honeydrive@honeydrive:/honeydrive/thug/src$ sudo python thug.py http://192.168.5
 
 Checking out the logs directy shows us some long directory names. There is the thug.csv file which tells you which url request corresponds to the directory names. The names were computed by hashing the contents of the request.
 
-{% highlight ruby %}
+{% highlight tcsh %}
 honeydrive@honeydrive:/honeydrive/thug/logs/6b3804e98f36d15e1bb5bc1e9cee0a75$ tree
 .
 └── 20150508004242
@@ -133,7 +130,7 @@ unfortunately we didnt really get that much out of this request.
 looking at the html files it seems that the script is fingerprinting the requester and routing it to an exploit accordingly.
 
 
-{% highlight ruby %}
+{% highlight tcsh %}
 sudo python thug.py -u winxpie60 -J 1.1 http://192.168.5.105:8080/test
 {% endhighlight %}
 
@@ -142,9 +139,4 @@ By playing with the user agent and the plugin versions you can get the webserver
 The analysis folder in the log directly contains a generated image in svg format that allows to to visualize the redirects at each hop and the method of the redirect. This can get pretty crazy and intricate. This is good place to start to see suspicious redirects or inclusions in seemly innocous domains.
 
 
-
-
-
-
-
-
+Thug is a great tool for analyzing web request responses. It builds a comprehensive file structure of resources it obtains via the request and automatically beautifies any javascript found. It definitely has a lot of potential to pull some interesting artifacts out of any client side browser exploit. 
