@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tutorial on using Thug.py : a sweet sticky client
+title: Tutorial on using Thug.py, the sweet sticky client
 ---
 Most "honey" software is intended to emulate a server side to get intelligence from accessing attempts. Client side attacks are becoming common and there to research these attacks there is a need for emulating a client. This is what thug does. It requests a target url, follows redirects and obtains all javascript and shellcode from potentially malicious urls. 
 
