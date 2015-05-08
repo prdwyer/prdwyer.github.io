@@ -9,7 +9,7 @@ Thug can be found on the excellent honeydrive linux distribution but the project
 
 Thug has a lot of capabilites as you can see from the a -h
 
-{% highlight %}
+{% highlight tcsh %}
 
  Thug: Pure Python honeyclient implementation
 
@@ -91,7 +91,7 @@ Thug has a lot of capabilites as you can see from the a -h
 It supports all kinds of user agents, allows you to send the samples directly to virustotal and gives you the option to specify different plugins. The proxy support is also a great feature.
 
 To demo it I threw up a standard metasploit browser autopwn module and pointed thug at it without using any options.
-{% highlight %}
+{% highlight tcsh %}
 sudo python thug.py http://192.168.5.105:8080/test
 
 [2015-05-08 00:42:32] [window open redirection] about:blank -> http://192.168.5.105:8080/test/
@@ -114,7 +114,7 @@ honeydrive@honeydrive:/honeydrive/thug/src$ sudo python thug.py http://192.168.5
 
 Checking out the logs directy shows us some long directory names. There is the thug.csv file which tells you which url request corresponds to the directory names. The names were computed by hashing the contents of the request.
 
-{% highlight %}
+{% highlight tcsh %}
 honeydrive@honeydrive:/honeydrive/thug/logs/6b3804e98f36d15e1bb5bc1e9cee0a75$ tree
 .
 └── 20150508004242
@@ -134,7 +134,7 @@ unfortunately we didnt really get that much out of this request.
 looking at the html files it seems that the script is fingerprinting the requester and routing it to an exploit accordingly.
 
 
-{% highlight %}
+{% highlight tcsh %}
 sudo python thug.py -u winxpie60 -J 1.1 http://192.168.5.105:8080/test
 {% endhighlight %}
 
