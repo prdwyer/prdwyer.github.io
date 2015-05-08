@@ -40,11 +40,11 @@ Nmap done: 1 IP address (1 host up) scanned in 13.93 seconds
 
 scripts can be run individually using their script name or many of of them can be run by categories. 
 
-* **auth**:    Scripts that can take user name and password to obtain information from services. Also includes scripts that attempt to enumerate users.
+* **auth** - Scripts that can take user name and password to obtain information from services. Also includes scripts that attempt to enumerate users.
 
-* **broadcast**:     Mostly discovery scripts that attempt to enumerate hosts based upon various types of broadcast packets. 
+* **broadcast** -     Mostly discovery scripts that attempt to enumerate hosts based upon various types of broadcast packets. 
 
-* **brute** : Brute forcing various services.
+* **brute** - Brute forcing various services.
 
 * **default** - These scripts are the ones run by the -sC option
 
