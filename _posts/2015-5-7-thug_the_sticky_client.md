@@ -5,6 +5,11 @@ title: Tutorial on using Thug.py, the sweet sticky client
 Most "honey" software is intended to emulate a systemhowever, client side attacks are becoming common and to research these attacks there is a need for emulating a client. Enter thug. It requests a target url, follows redirects and obtains all javascript and shellcode from potentially malicious urls.
 Thug can be found on the excellent honeydrive linux distribution but the project is being very actively maintained and newer version can be cloned right from [https://github.com/buffer/thug](https://github.com/buffer/thug)
 
+There is information on 2 thug docker images here [https://www.honeynet.org/node/1168](https://www.honeynet.org/node/1168)
+
+The guy from bruteforce labs has a nice script for a vagrant set up here [https://github.com/ikoniaris/thug-vagrant](https://github.com/ikoniaris/thug-vagrant)
+
+
 {% highlight tcsh %}
 
  Thug: Pure Python honeyclient implementation
